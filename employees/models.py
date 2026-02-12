@@ -6,7 +6,7 @@ from django.db import models
 class Employee(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
-    photo = models.ImageField(upload_to='images/')
+    photo = models.URLField(max_length=500, null=True, blank=True)
     designation = models.CharField(max_length=100)
     phone_number = models.CharField(max_length=12, blank=True)
     email_address = models.EmailField(max_length=100, unique=True)
